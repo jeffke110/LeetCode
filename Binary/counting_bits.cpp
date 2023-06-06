@@ -4,8 +4,8 @@
 class Solution {
 public:
     std::vector<int> countBits(int num) {
+        //creates a vector list of 0 of size (num + 1) # to include 0
         std::vector<int> counts(num + 1, 0);
-
         for (int i = 1; i <= num; i++) {
             counts[i] = counts[i >> 1] + (i & 1);
         }
