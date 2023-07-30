@@ -1,3 +1,6 @@
+#include <vector>
+using namespace std;
+
 class Solution {
 public:
     int maxArea(vector<int>& height) {
@@ -19,6 +22,4 @@ public:
         
         return maxArea;
     }
-
-     //max_height = max(height[i], max_height);
 };
