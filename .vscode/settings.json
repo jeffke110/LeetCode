@@ -4,6 +4,12 @@
         "algorithm": "cpp",
         "unordered_map": "cpp",
         "xutility": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "xstring": "cpp"
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#1F321A",
+        "titleBar.activeBackground": "#2B4625",
+        "titleBar.activeForeground": "#F8FBF7"
     }
 }
