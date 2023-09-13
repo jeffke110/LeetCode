@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <cmath>
+#include <algorithm>
 
 
 class Solution
@@ -11,7 +11,7 @@ public:
         if (str1 + str2 != str2 + str1){
             return "";
         }
-        int gcd = std::__gcd(str1.length(), str2.length());
+        int gcd = __gcd(str1.length(), str2.length());
         return str1.substr(0, gcd);
     }
 };
