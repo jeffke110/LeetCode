@@ -5,7 +5,8 @@
         "unordered_map": "cpp",
         "xutility": "cpp",
         "iostream": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "unordered_set": "cpp"
     },
     "workbench.colorCustomizations": {
         "activityBar.background": "#1F321A",
