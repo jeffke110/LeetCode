@@ -72,8 +72,8 @@
     "xtree": "cpp"
   },
   "workbench.colorCustomizations": {
-    "activityBar.background": "#1F321A",
-    "titleBar.activeBackground": "#2B4625",
+    "activityBar.background": "#4e0000",
+    "titleBar.activeBackground": "#4e0000",
     "titleBar.activeForeground": "#F8FBF7"
   },
   "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build/vcvarsall.bat",
