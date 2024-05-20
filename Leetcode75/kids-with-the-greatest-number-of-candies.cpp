@@ -25,14 +25,4 @@ public:
         return output;
     }
 
-
-
-
-
-
-
-
-
-
-
 };
