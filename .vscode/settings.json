@@ -69,7 +69,9 @@
     "xloctime": "cpp",
     "xmemory": "cpp",
     "xtr1common": "cpp",
-    "xtree": "cpp"
+    "xtree": "cpp",
+    "forward_list": "cpp",
+    "valarray": "cpp"
   },
   "workbench.colorCustomizations": {
     "activityBar.background": "#4e0000",
