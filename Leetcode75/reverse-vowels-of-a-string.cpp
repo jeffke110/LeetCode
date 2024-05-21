@@ -2,31 +2,37 @@
 #include <string>
 #include <unordered_set>
 
-using namespace std;
 
-class Solution
-{
+class Solution {
+
+
 public:
-    string reverseVowels(string s)
-    {
-       
-        unordered_set<char> vowlSet{'a', 'e', 'i', 'o', 'u'};
-        std::vector<char> vowels;
-        for(int i = s.size() - 1; i >= 0; i--){
-            if(vowlSet.contains(s[i])){
-                vowels.push_back(s[i]);
+    std::string reverseVowels(std::string s){
+        std::unordered_set<char> vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I','O', 'U'};
+        int left = 0;
+        int right = s.length() - 1;
+        while(left < right){
+            while(left < right && vowels.find(s[left]) == vowels.end()){
+                left++;
+            }
+            while(left < right && vowels.find(s[right]) == vowels.end()){
+                right--;
+            }
+            if(left < right){
+                std::swap(s[left], s[right]);
+                left++;
+                right--;
             }
         }
-
-        for(int i = 0; i < s.size(); i++){
-            if(vowlSet.contains(s[i])){
-                char replace = vowels.front();
-                s[i] = replace;
-                vowels.erase(vowels.begin());
-            }
-        }
-
         return s;
-
     }
 };
+
+int main(){
+    Solution solution;
+    std::string input = "hello";
+    std::string result = solution.reverseVowels(input);
+    std::cout << "Reverse vowels: " << result << std::endl;
+
+
+}
