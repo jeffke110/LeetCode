@@ -5,22 +5,27 @@
 class Solution {
 public:
     std::string reverseWords(std::string s) { 
-        std::istringstream iss(s);
+
+
+        // split up the string into a vector of strings from the back
+        int right = s.length() - 1;
+        int left = 0;
         std::string word;
-        std::vector<std::string> wordVec;
-
-        while(iss>>word){
-            wordVec.push_back(word);
-        }
-        std::reverse(wordVec.begin(), wordVec.end());
-
-        std::string output;
-        for(auto& word : wordVec){
-            output += word;
-            if(&word != &wordVec.back()){
-                output += " ";
+        std::string words;
+        while(left <= right){
+            while(left <= right && s[left] != ' '){
+                word.push_back(s[left]);
+                left++;
             }
+            while(left <= right && s[left] == ' '){
+                left++;
+            }
+            word.push_back(' ');
+            words = word + words;
+            word.clear();
         }
-        return output;
+        size_t end = words.find_last_not_of(' ');
+        words.erase(end + 1);
+        return words;
     }
 };
