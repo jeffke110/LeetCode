@@ -3,16 +3,16 @@
 
 class RecentCounter {
 public:
-    int counter;
-    std::queue<int> requestQueue;
+    std::queue<int> q;
+
     RecentCounter() {
-        counter = 0;
     }
-    
+
     int ping(int t) {
-        if(t < 3000){
-            requestQueue.push(t);
+        q.push(t);
+        while (!q.empty() && t > q.front() + 3000) {
+            q.pop();
         }
-        return requestQueue.size();
+        return q.size();
     }
 };
